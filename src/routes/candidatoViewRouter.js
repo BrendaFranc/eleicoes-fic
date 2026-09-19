@@ -1,15 +1,14 @@
 import { Router } from "express";
-import { candidatos } from "../dados/candidatos.js";
+import { candidatos } from '../dados/candidatos.js';
 
 const candidatoViewRouter = Router();
 
 candidatoViewRouter.get('/candidatos', (req, res) => {
-  //  
-  res.render('home', 
-    {
-     titulo : 'Lista de Candidatos xxxx',
-    candidatos 
-    }
+    //
+  res.render('home', {
+    titulo : 'Lista de Candidatos',
+    candidatos
+    } 
 )
 })
 
@@ -24,4 +23,4 @@ candidatoViewRouter.get('/candidato/:id', (req, res) => {
     }
 })
 
-export default candidatoViewRouter  
+export default candidatoViewRouter
